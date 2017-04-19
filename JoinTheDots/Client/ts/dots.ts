@@ -1,4 +1,4 @@
-﻿import { } from "./helpers";
+﻿import { lineFunction } from "./helpers";
 import * as $ from "jquery";
 import * as d3 from "d3";
 
@@ -12,10 +12,7 @@ export class Dots {
     lineFunction;
 
     constructor() {
-        this.lineFunction = d3.line()
-            .x(function (d) { return d[0]; })
-            .y(function (d) { return d[1]; })
-            .curve(d3.curveLinear);
+        this.lineFunction = lineFunction;
     };
 
     JoinTheDots() {
@@ -24,6 +21,10 @@ export class Dots {
         }
 
         this.lineData.push({ "x": this.nodeArray[0].attr("cx"), "y": this.nodeArray[0].attr("cy") });
+
+        //console.log(this.lineData);
+        //console.log(this.lineFunction);
+        console.log(this.lineFunction(this.lineData));
 
         var pathContainer = d3.select("#pathContainer");
         pathContainer.append("path")

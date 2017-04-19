@@ -1,6 +1,6 @@
 ﻿import * as d3 from "d3";
 import { Dots } from "./dots";
-import { alexPixToValX, alexPixToValY, alexValToPixX, alexValToPixY } from "./helpers";
+import { alexPixToValX, alexPixToValY, alexValToPixX, alexValToPixY, lineFunction } from "./helpers";
 
 export class Graph {
 
@@ -55,10 +55,7 @@ export class Graph {
 
         this.svg.selectAll("*").remove();
 
-        this.lineFunction = d3.line()
-            .x(function (d) { return d[0]; })
-            .y(function (d) { return d[1]; })
-            .curve(d3.curveLinear);
+        this.lineFunction = lineFunction;
 
         this.drag = d3.drag()
             .on("drag", function () {

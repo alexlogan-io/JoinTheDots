@@ -1,4 +1,4 @@
-﻿import * as $ from "jquery";
+﻿const $ = require('expose-loader?$!expose-loader?jQuery!jquery');
 import { Graph } from "./graph";
 
 import "../css/site.css";
