@@ -1,0 +1,54 @@
+.row-eq-height {
+    display: flex;
+}
+
+    .row-eq-height > [class*="col-"] {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+div > a > img {
+    height: 180px !important;
+    max-width: 171px;
+}
+
+.axis path {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.textT {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.selectedArea {
+    fill: red;
+}
+
+.areaTag {
+    margin-right: 5px;
+}
+
+    .areaTag.selectedArea {
+        color: red;
+    }
+
+g > text {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#coordText {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/*# sourceMappingURL=site.css.map*/
